@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sea-safe-backend"
+version = "0.1.0"
+description = "Scientific Oceanographic SST Monitoring & Analytics Backend"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "SEA-SAFE Engineering Team"}
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    ".",
+    ".."
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
